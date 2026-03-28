@@ -1,0 +1,5 @@
+sample_id	condition	replicate	srr	bioproject	layout	strandedness
+GSM8014143	control	1	SRR27532983	PRJNA1064040	PE	unknown
+GSM8014142	control	2	SRR27532984	PRJNA1064040	PE	unknown
+GSM8014141	treated	1	SRR27532985	PRJNA1064040	PE	unknown
+GSM8014140	treated	2	SRR27532986	PRJNA1064040	PE	unknown

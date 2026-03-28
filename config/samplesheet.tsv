@@ -1,0 +1,5 @@
+srr	sample_id	condition	replicate
+SRR27532983	GSM8014143	control	1
+SRR27532984	GSM8014142	control	2
+SRR27532985	GSM8014141	treated	1
+SRR27532986	GSM8014140	treated	2

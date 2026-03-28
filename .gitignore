@@ -1,0 +1,17 @@
+# Data
+data/fastq/
+data/sra/
+data/tmp/
+data/processed/
+
+# Results
+results/
+
+# Logs
+*.log
+
+# Binaries
+scripts/c/bin/
+
+# OS
+.DS_Store
