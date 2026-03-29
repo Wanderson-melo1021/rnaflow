@@ -12,7 +12,9 @@ int main(void) {
     if (check_command("command -v fasterq-dump >/dev/null 2>&1", "ERROR: fasterq-dump not found")) return 1;
     if (check_command("command -v pigz >/dev/null 2>&1", "ERROR: pigz not found")) return 1;
     if (check_command("command -v zcat >/dev/null 2>&1", "ERROR: zcat not found")) return 1;
-
+    if (check_command("command -v qcflow >/dev/null 2>&1", "ERROR: qcflow not found")) return 1;
+    if (check_command("command -v Rscript >/dev/null 2>&1", "ERROR: Rscript not found")) return 1;
+    
     log_message("Validating input samplesheet");
 
     if (run_command(
@@ -32,6 +34,13 @@ int main(void) {
     if (run_command(
         "bash scripts/bash/02_data_acquisition.sh",
         "ERROR: data acquisition failed."
+    )) return 1;
+
+    log_message("Running qcflow quality control");
+
+    if (run_command(
+        "bash scripts/bash/03_run_qcflow.sh",
+        "ERROR: qcflow quality control failed."
     )) return 1;
 
     log_message("Pipeline finished successfully");
